@@ -17,13 +17,3 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 
-    @Id
-    private String id;
-
-    @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
-    private String nim;
-
-}

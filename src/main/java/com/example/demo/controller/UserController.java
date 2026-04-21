@@ -21,25 +21,3 @@ public class UserController {
         return "user berhasil dibuat";
     }
 
-    @GetMapping
-    public List<User> getAllUser(){
-        return userService.getAllUsers();
-    }
-
-    @DeleteMapping
-    public String deleteUser(@PathVariable String id){
-        userService.deleteUser(id);
-        return "user berhasil dihapus";
-    }
-
-    @GetMapping("/{id}")
-    public User getUserById(@PathVariable String id){
-        return userService.getUserById(id);
-    }
-
-    @PutMapping("/{id}")
-    public String updateUser(@PathVariable String id, @RequestBody User request){
-        userService.updateUser(id, request);
-        return "User berhasil diupdate";
-    }
-}
